@@ -10,6 +10,7 @@ body {
 }
 
 .pop-up-message-window {
+  text-align: center;
   height: 15em;
   width: 45em;
   display: none;
@@ -64,6 +65,9 @@ body {
 }
 
 .player-env-window {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   width: 33%;
   background-color: black;
 }
@@ -81,13 +85,14 @@ body {
 }
 
 .message-window {
-  width: 62%;
-  height: 6em;
+  width: 66%;
+  height: 9em;
+  padding-left: 30px;
 }
 
 .command-window {
-  width: 30%;
-  text-align: right;
+  width: 33%;
+  text-align: center;
   padding-right: 20px;
 }
 
