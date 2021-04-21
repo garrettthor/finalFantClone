@@ -10,11 +10,44 @@
     </head>
     
     <body>
+        <section class="window pop-up-message-window">
+            <h2>This is the Pop Up Message Window</h2>
+            <p>This is where the message will be displayed.  Click confirm to make this window disappear!</p>
+            <button type="button" name="button" id="confirm">Confirm</button>
+        </section>
+
         <section class="container">
             <section class="window main-window">
     
                 <section class="window enemy-env-window">
-                    <h2>Enemies go here</h2>
+
+                    <section class="enemy enemy1">
+                        <h5 id="enemy1-name">Enemy One</h5>
+                            <div class="hp-or-tp-horizontal">
+                                <span>HP  </span><span id="enemy1-hp">666</span>/<span id="enemy1-hp-total">666</span>
+                            </div>
+                    </section>
+
+                    <section class="enemy enemy2">
+                        <h5 id="enemy2-name">Enemy Two</h5>
+                            <div class="hp-or-tp-horizontal">
+                                <span>HP  </span><span id="enemy2-hp">666</span>/<span id="enemy2-hp-total">666</span>
+                            </div>
+                    </section>
+
+                    <section class="enemy enemy3">
+                        <h5 id="enemy3-name">Enemy Three</h5>
+                            <div class="hp-or-tp-horizontal">
+                                <span>HP  </span><span id="enemy3-hp">666</span>/<span id="enemy3-hp-total">666</span>
+                            </div>
+                    </section>
+
+                    <section class="enemy enemy4">
+                        <h5 id="enemy4-name">Enemy Four</h5>
+                            <div class="hp-or-tp-horizontal">
+                                <span>HP  </span><span id="enemy4-hp">666</span>/<span id="enemy4-hp-total">666</span>
+                            </div>
+                    </section>
                 </section>
     
                 <section class="window player-env-window">
@@ -71,9 +104,20 @@
     
             </section>
     
-            <section class="window message-window">
-                <h3>Messages display here</h3>
+            <section class="lower-container">
+                <section class="window message-window">
+                    <h3>Messages display here</h3>
+                </section>
+    
+                <section class="window command-window">
+                    <h3>Attack</h3>
+                    <h3>Skill</h3>
+                    <h3>Defend</h3>
+                </section>
             </section>
+            
+
+
         </section>
         
         <script type="text/javascript" src="js/main.js"></script>
