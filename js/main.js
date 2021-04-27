@@ -66,7 +66,12 @@ function confirmButtonPressed() {
 }
 
 function init() {
-    popUpWindow.style = 'display: block;'
+    //Set the turn count in the DOM to 1
+    document.querySelector('.message-window h3').innerText = (turnCount + 1)
+
+    //Un-comment the below code to re-engage the pop up window at start.
+
+    // popUpWindow.style = 'display: block;'
     
     //Load all the displayed Character information into the DOM
 
@@ -128,12 +133,11 @@ function createInitiativeOrder() {
 
 createInitiativeOrder()
 
-
-
 function turnUpdate() {
-    initiativeArray[turnCount].isTurn = true;
+    if (turnCount < initiativeArray.length){
+        initiativeArray[turnCount].isTurn = true;
     console.log(`Turn number: ${turnCount}.`)
-    if (turnCount > 7) {
+    } else if (turnCount = initiativeArray.length) {
         turnCount = 0
     }
     displayTurnIndicator()
@@ -215,10 +219,14 @@ document.querySelector('#attack').addEventListener('click', attack)
 
 function attack() {
     initiativeArray[turnCount].isTurn = false;
-    if (turnCount < 8){
+    console.log(`${initiativeArray[turnCount].name} attacks who?`)
+    advanceTurn()
+}
+
+function advanceTurn() {
+    if (turnCount < initiativeArray.length){
         turnCount += 1
     }
-    
-    document.querySelector('.message-window h3').innerText = turnCount
+    document.querySelector('.message-window h3').innerText = (turnCount + 1)
     turnUpdate()
 }
